@@ -19,7 +19,9 @@ const escapeHtml = (value) => String(value ?? '')
 
 async function storeInSupabase(payload) {
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const key =
+  process.env.SUPABASE_SECRET_KEY ||
+  process.env.SUPABASE_SERVICE_ROLE_KEY;;
   if (!url || !key) return { skipped: true };
 
   const table = payload.form_type === 'join-us' ? 'website_join_interest' : 'website_enquiries';
@@ -28,16 +30,21 @@ async function storeInSupabase(payload) {
     : ['form_type','full_name','email','phone','enquiry_type','message','consent','submitted_at','user_agent'];
   const record = Object.fromEntries(allowed.map((keyName) => [keyName, payload[keyName] ?? null]));
 
-  const response = await fetch(`${url}/rest/v1/${table}`, {
-    method: 'POST',
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
-    },
-    body: JSON.stringify(record),
-  });
+ const headers = {
+  apikey: key,
+  'Content-Type': 'application/json',
+  Prefer: 'return=minimal',
+};
+
+if (!key.startsWith('sb_secret_')) {
+  headers.Authorization = `Bearer ${key}`;
+}
+
+const response = await fetch(`${url}/rest/v1/${table}`, {
+  method: 'POST',
+  headers,
+  body: JSON.stringify(record),
+});
   if (!response.ok) throw new Error(`Supabase storage failed: ${await response.text()}`);
   return { stored: true };
 }
