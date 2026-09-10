@@ -86,3 +86,5 @@ Do not add production routes to `wrangler.jsonc` until DNS ownership and the int
 ## Rollback note
 
 The legacy Netlify configuration has intentionally been left in the repository during migration. It can be removed after the Cloudflare production cutover has been verified.
+
+<!-- Preview build trigger: 2026-09-11 -->
