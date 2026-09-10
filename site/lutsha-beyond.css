@@ -1,0 +1,170 @@
+/* Lutsha Beyond — page-specific presentation layer */
+.beyond-page{--beyond-teal:#16b89a;--beyond-blue:#1883cf;--beyond-coral:#fb4c2b;--beyond-gold:#f5b51b;--beyond-slate:#7b8da1;--beyond-ice:#f5f9fc;--beyond-shadow:0 24px 65px rgba(7,41,88,.14)}
+.beyond-page h1,.beyond-page h2{font-family:"Playfair Display",Georgia,serif}
+
+.beyond-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#fff 0%,#f5faff 56%,#fff9ed 100%);border-bottom:1px solid var(--line)}
+.beyond-hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:linear-gradient(90deg,#00a86b 0%,#00a7c8 23%,#1976d2 40%,#ef3340 60%,#ff8a00 80%,#ffd11a 100%)}
+.beyond-hero__rings{position:absolute;width:560px;height:560px;border:1px solid rgba(24,131,207,.14);border-radius:50%;right:-130px;top:42px;box-shadow:0 0 0 75px rgba(24,131,207,.04),0 0 0 150px rgba(22,184,154,.025);pointer-events:none}
+.beyond-hero__grid{min-height:680px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:70px;padding:58px 0 72px;position:relative;z-index:2}
+.beyond-programme-mark{display:inline-grid;gap:2px;border-left:4px solid var(--beyond-gold);padding:6px 0 6px 14px;margin-bottom:24px}
+.beyond-programme-mark span{font-family:"Playfair Display",Georgia,serif;font-size:1.2rem;color:var(--navy);font-weight:700;letter-spacing:.02em}
+.beyond-programme-mark small{font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:#60758c}
+.beyond-eyebrow{margin:0 0 13px;color:var(--blue);font-size:.73rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+.beyond-hero h1{margin:0;color:var(--navy);font-size:clamp(3.7rem,7vw,6.8rem);line-height:.96;letter-spacing:-.055em}
+.beyond-hero h1 span{background:linear-gradient(90deg,var(--beyond-teal),var(--beyond-blue),var(--beyond-coral),var(--beyond-gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.beyond-lead{max-width:740px;margin:28px 0 30px;font-size:1.08rem;color:#506b82;line-height:1.75}
+.beyond-hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+.beyond-button--outline{border:1px solid #cbd8e4;background:rgba(255,255,255,.72);color:var(--navy)}
+.beyond-proof-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:34px}
+.beyond-proof-row span{border:1px solid #d2dfe9;border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.6);color:var(--navy);font-size:.69rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.beyond-hero__visual{position:relative;min-height:540px}
+.beyond-photo-frame{position:absolute;inset:10px 28px 10px 25px;overflow:hidden;border-radius:245px 245px 34px 34px;border:8px solid rgba(255,255,255,.72);box-shadow:0 35px 80px rgba(7,41,88,.22);background:#dceaf4}
+.beyond-photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(4,27,56,.28),transparent 48%)}
+.beyond-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:50% center}
+.beyond-route-card{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:17px;background:rgba(255,255,255,.96);box-shadow:0 18px 48px rgba(7,41,88,.18);color:var(--ink);border:1px solid rgba(255,255,255,.8)}
+.beyond-route-card svg{flex:0 0 auto;color:var(--teal)}
+.beyond-route-card strong,.beyond-route-card span{display:block}
+.beyond-route-card strong{color:var(--navy);font-size:.88rem}
+.beyond-route-card span{margin-top:2px;color:var(--muted);font-size:.7rem}
+.beyond-route-card--top{right:-5px;top:56px;min-width:245px}
+.beyond-route-card--bottom{left:-20px;bottom:42px;max-width:330px;border-top:4px solid var(--beyond-gold)}
+.beyond-route-card--bottom strong{font-family:"Playfair Display",Georgia,serif;font-size:1.28rem}
+
+.beyond-intro__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:78px;align-items:start}
+.beyond-intro h2,.beyond-journey-section h2,.beyond-feature-grid h2,.beyond-funder-heading h2,.beyond-resources-grid h2,.beyond-connect-intro h2,.beyond-final-cta h2{font-size:clamp(2.35rem,4.5vw,4.2rem);letter-spacing:-.04em;line-height:1.04}
+.beyond-body-copy{font-size:1.03rem;color:#536d84}
+.beyond-body-copy p:last-child{margin-bottom:0}
+.beyond-ambition{margin-top:62px;display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:center;border-radius:26px;padding:30px 34px;background:linear-gradient(120deg,var(--navy3),#0a4179 62%,#087f7b);color:#dcecf6;box-shadow:var(--beyond-shadow)}
+.beyond-ambition__number{font-family:"Playfair Display",Georgia,serif;font-size:4rem;line-height:1;color:#fff;border-right:1px solid rgba(255,255,255,.18);padding-right:28px}
+.beyond-ambition__label{display:block;color:#9ce4d6;text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:.68rem;margin-bottom:5px}
+.beyond-ambition h3{margin:0 0 6px;color:#fff;font-size:1.3rem}
+.beyond-ambition p{margin:0;color:#d8e7f2;font-size:.9rem}
+
+.beyond-heading{max-width:850px}
+.beyond-model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.beyond-model-card{--accent:var(--beyond-blue);position:relative;overflow:hidden;padding:29px 24px 25px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 32px rgba(7,41,88,.055)}
+.beyond-model-card:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--accent)}
+.beyond-model-card--teal{--accent:var(--beyond-teal)}.beyond-model-card--blue{--accent:var(--beyond-blue)}.beyond-model-card--coral{--accent:var(--beyond-coral)}.beyond-model-card--gold{--accent:var(--beyond-gold)}
+.beyond-card-number{display:block;font-family:"Playfair Display",Georgia,serif;font-size:2rem;color:#cad6e1;line-height:1;margin-bottom:18px}
+.beyond-card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:color-mix(in srgb,var(--accent) 12%,white);color:var(--navy);margin-bottom:17px}
+.beyond-card-icon .icon{width:26px;height:26px}
+.beyond-model-card h3{margin-bottom:9px;color:var(--navy);font-size:1.08rem}
+.beyond-model-card p{margin-bottom:14px;color:var(--muted);font-size:.88rem}
+.beyond-model-card small{display:block;border-top:1px solid #e6edf3;padding-top:12px;color:#667a8e;font-size:.72rem}
+
+.beyond-journey-section{padding:86px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.beyond-journey__intro{max-width:860px;margin:0 auto 44px;text-align:center}
+.beyond-journey__intro p{max-width:760px;margin:16px auto 0;color:var(--muted)}
+.beyond-journey{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:center}
+.beyond-journey>div{min-height:132px;padding:20px 18px;border-radius:18px;background:linear-gradient(145deg,#f7fafc,#fff);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.beyond-journey>div span{font-size:.68rem;color:var(--blue);font-weight:800;letter-spacing:.1em}
+.beyond-journey>div strong{color:var(--navy);font-size:1rem;margin:5px 0}
+.beyond-journey>div small{color:var(--muted);font-size:.75rem}
+.beyond-journey>i{font-style:normal;color:#a4b6c6;font-size:1.45rem}
+.beyond-passport-note{max-width:820px;margin:28px auto 0;display:flex;align-items:center;gap:14px;padding:17px 20px;border-radius:15px;background:#eef7fd;color:#4f6c84}
+.beyond-passport-note svg{color:var(--blue);flex:0 0 auto}
+.beyond-passport-note strong,.beyond-passport-note span{display:block}.beyond-passport-note strong{color:var(--navy);font-size:.9rem}.beyond-passport-note span{font-size:.8rem}
+
+.beyond-pathway-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:42px}
+.beyond-pathway-card{--accent:var(--beyond-blue);position:relative;overflow:hidden;padding:25px 20px 22px;background:#fff;border:1px solid var(--line);border-radius:18px}
+.beyond-pathway-card:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--accent)}
+.beyond-pathway-card--teal{--accent:var(--beyond-teal)}.beyond-pathway-card--blue{--accent:var(--beyond-blue)}.beyond-pathway-card--coral{--accent:var(--beyond-coral)}.beyond-pathway-card--gold{--accent:var(--beyond-gold)}.beyond-pathway-card--slate{--accent:var(--beyond-slate)}
+.beyond-pathway-code{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--accent) 12%,white);color:var(--navy);font-weight:900;font-size:.78rem;margin-bottom:18px}
+.beyond-pathway-card h3{font-size:1rem;color:var(--navy);margin-bottom:8px}
+.beyond-pathway-card p{color:var(--muted);font-size:.84rem;line-height:1.58}
+.beyond-pathway-card small{display:block;border-top:1px solid var(--line);padding-top:11px;color:#64798d;font-size:.7rem}
+.beyond-disclaimer{margin:22px 0 0;color:#718296;font-size:.75rem;font-style:italic}
+
+.beyond-feature-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:72px;align-items:center}
+.beyond-feature-grid--reverse{grid-template-columns:1.12fr .88fr}
+.beyond-lead-small{font-size:1.01rem;color:var(--muted)}
+.beyond-feature-visual{position:relative;min-height:430px;overflow:hidden;border-radius:32px;background:linear-gradient(145deg,#eaf7f6,#eef6fd 54%,#fff5df);border:1px solid #dce8ef}
+.beyond-feature-visual:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;border:55px solid rgba(24,131,207,.07);right:-50px;bottom:-70px}
+.beyond-mini-globe{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:245px;height:245px;border:3px solid var(--navy2);border-radius:50%;opacity:.82}
+.beyond-mini-globe:before,.beyond-mini-globe:after{content:"";position:absolute;inset:18px 70px;border:2px solid var(--blue);border-radius:50%}
+.beyond-mini-globe:after{inset:70px 18px;transform:rotate(90deg)}
+.beyond-mini-globe span:nth-child(1){position:absolute;left:0;right:0;top:50%;height:2px;background:var(--blue)}
+.beyond-mini-globe span:nth-child(2){position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--blue)}
+.beyond-mini-globe span:nth-child(3){position:absolute;width:18px;height:18px;border:4px solid #fff;border-radius:50%;background:var(--beyond-coral);right:38px;top:83px;box-shadow:0 4px 14px rgba(7,41,88,.18)}
+.beyond-feature-quote{position:absolute;z-index:2;left:25px;right:25px;bottom:24px;padding:18px 19px;border-radius:17px;background:rgba(255,255,255,.94);box-shadow:0 16px 45px rgba(7,41,88,.13)}
+.beyond-feature-quote strong,.beyond-feature-quote span{display:block}.beyond-feature-quote strong{color:var(--navy);font-size:.98rem}.beyond-feature-quote span{margin-top:4px;color:var(--muted);font-size:.75rem}
+.beyond-check-list{list-style:none;margin:25px 0;padding:0;display:grid;gap:10px}
+.beyond-check-list--two{grid-template-columns:repeat(2,1fr);gap:10px 22px}
+.beyond-check-list li{position:relative;padding-left:25px;color:#425a71;font-size:.9rem}
+.beyond-check-list li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}
+.beyond-fineprint{margin:16px 0 0;color:#7a8999;font-size:.72rem}
+
+.beyond-partner-section{background:linear-gradient(180deg,#fff,#fbfdff)}
+.beyond-partner-panel{padding:34px;border-radius:28px;background:linear-gradient(140deg,var(--navy3),#0b3b78 62%,#087f7b);color:#dbeaf3;box-shadow:var(--beyond-shadow)}
+.beyond-panel-kicker{color:#a2e4d7;font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
+.beyond-partner-panel h3{color:#fff;font-family:"Playfair Display",Georgia,serif;font-size:1.8rem;line-height:1.12;margin:10px 0 25px}
+.beyond-panel-list{display:grid;gap:13px}
+.beyond-panel-list>div{display:flex;gap:12px;padding:15px;border:1px solid rgba(255,255,255,.1);border-radius:15px;background:rgba(255,255,255,.055)}
+.beyond-panel-list svg{color:#a3eadb;flex:0 0 auto}
+.beyond-panel-list strong,.beyond-panel-list small{display:block}.beyond-panel-list strong{color:#fff;font-size:.84rem}.beyond-panel-list small{margin-top:3px;color:#c5d9e7;font-size:.72rem}
+.beyond-inline-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:28px}
+
+.beyond-funder-heading{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:end}
+.beyond-funder-heading p{margin:0 0 8px;color:var(--muted);font-size:.98rem}
+.beyond-funding-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:42px}
+.beyond-funding-grid article{padding:24px 22px;border-radius:18px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--beyond-gold);box-shadow:0 8px 26px rgba(7,41,88,.045)}
+.beyond-funding-grid span{font-family:"Playfair Display",Georgia,serif;color:#c8d4df;font-size:1.65rem}
+.beyond-funding-grid h3{font-size:1rem;color:var(--navy);margin:7px 0}
+.beyond-funding-grid p{margin:0;color:var(--muted);font-size:.82rem}
+.beyond-funder-strip{margin-top:20px;display:flex;justify-content:space-between;align-items:center;gap:28px;padding:22px 24px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.beyond-funder-strip strong,.beyond-funder-strip span{display:block}.beyond-funder-strip strong{color:var(--navy);font-size:.88rem}.beyond-funder-strip span{margin-top:4px;color:var(--muted);font-size:.75rem}
+
+.beyond-resources-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.beyond-resource-list{display:grid;gap:11px}
+.beyond-resource-list a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 18px;border:1px solid var(--line);border-radius:15px;background:#fff;transition:.2s}
+.beyond-resource-list a:hover{transform:translateX(4px);box-shadow:0 10px 28px rgba(7,41,88,.07)}
+.beyond-resource-list span{display:grid}.beyond-resource-list strong{color:var(--navy)}.beyond-resource-list small{color:var(--muted);font-size:.74rem}.beyond-resource-list svg{color:var(--blue);flex:0 0 auto}
+
+.beyond-connect-section{background:linear-gradient(180deg,#f5f9fc,#fff)}
+.beyond-connect-intro{top:126px}
+.beyond-final-cta{position:relative;overflow:hidden;padding:86px 0;background:linear-gradient(110deg,#071e3c,#123d73 58%,#087f7b);color:#dcecf6}
+.beyond-final-cta:after{content:"";position:absolute;width:390px;height:390px;border:75px solid rgba(255,255,255,.045);border-radius:50%;right:-90px;top:-95px}
+.beyond-final-cta__grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.beyond-final-cta__kicker{display:block;color:#a6e7da;font-size:.75rem;font-weight:900;letter-spacing:.18em;margin-bottom:12px}
+.beyond-final-cta h2{color:#fff;margin-bottom:12px}
+.beyond-final-cta p{margin:0;color:#c9deea;font-size:1rem}
+.beyond-final-cta__actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.beyond-light-link{color:#fff;font-weight:800;border-bottom:1px solid rgba(255,255,255,.42);padding-bottom:3px}
+
+@media(max-width:1050px){
+  .beyond-hero__grid,.beyond-intro__grid,.beyond-feature-grid,.beyond-feature-grid--reverse,.beyond-funder-heading,.beyond-resources-grid,.beyond-final-cta__grid{grid-template-columns:1fr}
+  .beyond-hero__visual{min-height:500px;max-width:590px;width:100%;margin:auto}
+  .beyond-model-grid{grid-template-columns:repeat(2,1fr)}
+  .beyond-pathway-grid{grid-template-columns:repeat(2,1fr)}
+  .beyond-funding-grid{grid-template-columns:repeat(2,1fr)}
+  .beyond-feature-grid--reverse .beyond-partner-panel{order:2}
+  .beyond-funder-heading{gap:18px}
+}
+@media(max-width:800px){
+  .beyond-journey{grid-template-columns:1fr;gap:9px}
+  .beyond-journey>i{transform:rotate(90deg);text-align:center;height:18px;line-height:18px}
+  .beyond-journey>div{min-height:auto}
+  .beyond-ambition{grid-template-columns:1fr;gap:14px}
+  .beyond-ambition__number{border-right:0;border-bottom:1px solid rgba(255,255,255,.18);padding:0 0 18px}
+}
+@media(max-width:680px){
+  .beyond-hero__grid{min-height:auto;padding:48px 0 80px;gap:35px}
+  .beyond-programme-mark{margin-bottom:18px}
+  .beyond-programme-mark small{font-size:.58rem;letter-spacing:.08em}
+  .beyond-hero h1{font-size:clamp(3rem,15vw,4.3rem)}
+  .beyond-lead{font-size:.98rem}
+  .beyond-hero__actions .button{width:100%}
+  .beyond-hero__visual{min-height:415px}
+  .beyond-photo-frame{inset:0 8px}
+  .beyond-route-card--top{right:-1px;top:26px;min-width:215px}
+  .beyond-route-card--bottom{left:0;bottom:22px;max-width:260px}
+  .beyond-route-card--bottom strong{font-size:1.1rem}
+  .beyond-model-grid,.beyond-pathway-grid,.beyond-funding-grid,.beyond-check-list--two{grid-template-columns:1fr}
+  .beyond-ambition{padding:25px 23px}
+  .beyond-ambition__number{font-size:3.2rem}
+  .beyond-intro h2,.beyond-journey-section h2,.beyond-feature-grid h2,.beyond-funder-heading h2,.beyond-resources-grid h2,.beyond-connect-intro h2,.beyond-final-cta h2{font-size:2.55rem}
+  .beyond-feature-visual{min-height:340px}
+  .beyond-mini-globe{width:200px;height:200px}
+  .beyond-funder-strip{align-items:flex-start;flex-direction:column}
+  .beyond-funder-strip .button{width:100%}
+}
