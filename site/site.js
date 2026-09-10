@@ -3,6 +3,7 @@ const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><u
 const navItems = [
   ['Home', '/'],
   ['Solutions', '/solutions/'],
+  ['Lutsha Beyond', '/lutsha-beyond/'],
   ['Enrolments', '/enrolments/'],
   ['Join Us', '/join-us/'],
   ['Contact Us', '/contact/'],
@@ -100,7 +101,7 @@ function setupFaqs() {
 }
 
 function setupForms() {
-  document.querySelectorAll('form[data-netlify-function]').forEach((form) => {
+  document.querySelectorAll('form[data-netlify-function], form[data-api-form]').forEach((form) => {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const submit = form.querySelector('button[type="submit"]');
@@ -112,8 +113,8 @@ function setupForms() {
       status.textContent = '';
       try {
         const payload = Object.fromEntries(new FormData(form).entries());
-        payload.formType = form.dataset.netlifyFunction;
-        const response = await fetch('/.netlify/functions/submit-form', {
+        payload.formType = form.dataset.apiForm || form.dataset.netlifyFunction;
+        const response = await fetch('/api/submit-form', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -134,7 +135,20 @@ function setupForms() {
   });
 }
 
+function setupBeyondAudienceLinks() {
+  const select = document.querySelector('#connect select[name="audience"]');
+  if (!select) return;
+  document.querySelectorAll('[data-beyond-audience]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const value = link.dataset.beyondAudience;
+      const option = [...select.options].find((item) => item.value === value || item.text === value);
+      if (option) select.value = option.value;
+    });
+  });
+}
+
 renderHeader();
 renderFooter();
 setupFaqs();
 setupForms();
+setupBeyondAudienceLinks();
