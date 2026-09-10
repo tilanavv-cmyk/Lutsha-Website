@@ -1,0 +1,43 @@
+/* Lutsha Beyond visual refinements — passport, gradient rhythm and globe */
+.beyond-gradient-text{background:linear-gradient(90deg,#00a86b 0%,#00a7c8 23%,#1976d2 42%,#ef3340 63%,#ff8a00 81%,#ffd11a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.beyond-passport-wrap{max-width:980px;margin:34px auto 0;display:grid;grid-template-columns:285px 1fr;gap:24px;align-items:center}
+.beyond-passport-card{position:relative;overflow:hidden;min-height:340px;padding:26px 24px;border-radius:26px;background:linear-gradient(145deg,#082958 0%,#0b3f7a 56%,#087f7b 100%);box-shadow:0 24px 60px rgba(7,41,88,.22);color:#fff;border:1px solid rgba(255,255,255,.12)}
+.beyond-passport-card:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-115px;top:-95px;box-shadow:0 0 0 42px rgba(255,255,255,.03),0 0 0 84px rgba(255,255,255,.02)}
+.beyond-passport-card__logo{position:relative;z-index:2;width:68px;height:68px;display:grid;place-items:center;border-radius:18px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);box-shadow:0 8px 24px rgba(0,0,0,.12);margin-bottom:24px}
+.beyond-passport-card__logo img{width:50px;height:50px;object-fit:contain;display:block}
+.beyond-passport-card__eyebrow{position:relative;z-index:2;font-size:.65rem;letter-spacing:.17em;font-weight:900;color:#afe8dd;margin-bottom:8px}
+.beyond-passport-card__title{position:relative;z-index:2;font-family:"Playfair Display",Georgia,serif;font-size:2rem;line-height:1.05;margin-bottom:17px}
+.beyond-passport-card__meta{position:relative;z-index:2;display:flex;gap:7px;flex-wrap:wrap}
+.beyond-passport-card__meta span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.085);border:1px solid rgba(255,255,255,.13);font-size:.61rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.beyond-passport-card__stamp{position:absolute;z-index:2;left:24px;bottom:72px;padding:8px 13px;border:2px solid rgba(255,255,255,.48);border-radius:999px;font-size:.7rem;font-weight:900;letter-spacing:.13em;transform:rotate(-8deg);color:#fff}
+.beyond-passport-card__swoosh{position:absolute;z-index:1;right:-42px;bottom:31px;width:235px;height:13px;border-radius:100% 0 100% 0;transform:rotate(-11deg);background:linear-gradient(90deg,#00a86b 0%,#00a7c8 23%,#1976d2 40%,#ef3340 60%,#ff8a00 80%,#ffd11a 100%);box-shadow:0 5px 18px rgba(0,0,0,.12)}
+.beyond-passport-wrap .beyond-passport-note{max-width:none;margin:0;min-height:170px;padding:28px 30px;border-radius:22px;background:linear-gradient(135deg,#f3f9fd,#fff);border:1px solid #dce8ef;box-shadow:0 14px 36px rgba(7,41,88,.07)}
+.beyond-passport-wrap .beyond-passport-note .icon{width:32px;height:32px}
+.beyond-passport-wrap .beyond-passport-note strong{font-family:"Playfair Display",Georgia,serif;font-size:1.55rem;margin-bottom:8px}
+.beyond-passport-wrap .beyond-passport-note span{font-size:.9rem;line-height:1.65}
+
+.beyond-globe-art{position:absolute;inset:0;overflow:hidden}
+.beyond-globe-art__halo{position:absolute;left:50%;top:45%;width:330px;height:330px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(22,184,154,.13),rgba(24,131,207,.07) 48%,transparent 70%)}
+.beyond-globe-art__sphere{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:245px;height:245px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 32% 27%,rgba(255,255,255,.5),transparent 20%),linear-gradient(145deg,#2ec7bd 0%,#1787cf 48%,#0b3267 100%);box-shadow:inset -28px -32px 48px rgba(4,24,53,.26),inset 16px 13px 30px rgba(255,255,255,.1),0 26px 55px rgba(7,41,88,.22)}
+.beyond-globe-art__sphere:before,.beyond-globe-art__sphere:after{content:"";position:absolute;pointer-events:none}
+.beyond-globe-art__sphere:before{inset:19px 69px;border:1px solid rgba(255,255,255,.35);border-radius:50%;box-shadow:0 0 0 44px transparent}
+.beyond-globe-art__sphere:after{left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.35);box-shadow:0 -53px 0 rgba(255,255,255,.2),0 53px 0 rgba(255,255,255,.2)}
+.beyond-globe-art__meridian{position:absolute;z-index:2;left:50%;top:45%;width:115px;height:245px;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.28);border-top:0;border-bottom:0;border-radius:50%}
+.beyond-globe-art__continent{position:absolute;z-index:3;background:rgba(240,251,247,.72);filter:drop-shadow(0 2px 4px rgba(7,41,88,.13))}
+.beyond-globe-art__continent--africa{left:46%;top:41%;width:44px;height:65px;clip-path:polygon(25% 0,75% 5%,100% 28%,75% 62%,55% 100%,31% 72%,3% 44%)}
+.beyond-globe-art__continent--europe{left:48%;top:33%;width:46px;height:27px;clip-path:polygon(0 44%,21% 6%,46% 22%,66% 0,100% 28%,78% 68%,39% 100%,9% 77%)}
+.beyond-globe-art__continent--asia{left:56%;top:31%;width:78px;height:55px;clip-path:polygon(0 30%,22% 9%,54% 0,100% 21%,92% 62%,64% 80%,34% 67%,16% 100%,7% 63%)}
+.beyond-globe-art__continent--americas{left:29%;top:30%;width:62px;height:103px;clip-path:polygon(4% 8%,42% 0,72% 15%,64% 34%,95% 47%,70% 63%,57% 100%,35% 77%,15% 65%,22% 42%,0 25%)}
+.beyond-globe-art__orbit{position:absolute;z-index:4;left:50%;top:45%;width:330px;height:130px;transform:translate(-50%,-50%) rotate(-13deg);border-top:2px dashed rgba(255,255,255,.92);border-radius:50%;filter:drop-shadow(0 2px 3px rgba(7,41,88,.18))}
+.beyond-globe-art__orbit:after{content:"✦";position:absolute;right:24px;top:-13px;color:#ffd11a;font-size:1.25rem;text-shadow:0 2px 7px rgba(7,41,88,.35)}
+.beyond-globe-art__marker{position:absolute;z-index:5;width:18px;height:18px;border:4px solid #fff;border-radius:50%;box-shadow:0 6px 18px rgba(7,41,88,.25)}
+.beyond-globe-art__marker--sa{left:48%;top:59%;background:#ef3340}
+.beyond-globe-art__marker--eu{left:51%;top:34%;background:#ffd11a}
+.beyond-globe-art__marker--asia{right:25%;top:40%;background:#ff8a00}
+.beyond-globe-art__label{position:absolute;z-index:5;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.94);box-shadow:0 8px 22px rgba(7,41,88,.12);color:#0b3267;font-size:.61rem;font-weight:900;letter-spacing:.08em}
+.beyond-globe-art__label--sa{left:31%;top:66%}.beyond-globe-art__label--global{right:13%;top:22%}
+.beyond-feature-visual--learners{background:radial-gradient(circle at 50% 42%,#eefaf8 0%,#edf7fd 48%,#fff8ea 100%)}
+
+@media(max-width:800px){.beyond-passport-wrap{grid-template-columns:1fr}.beyond-passport-card{max-width:325px;width:100%;margin:0 auto}.beyond-passport-wrap .beyond-passport-note{min-height:auto}}
+@media(max-width:680px){.beyond-globe-art__sphere{width:205px;height:205px}.beyond-globe-art__meridian{height:205px}.beyond-globe-art__orbit{width:280px}.beyond-globe-art__continent--africa{left:44%;top:40%}.beyond-globe-art__continent--americas{left:27%;top:29%;transform:scale(.85)}.beyond-globe-art__continent--asia{right:auto;left:57%;top:30%;transform:scale(.82)}.beyond-passport-card{min-height:325px}}
