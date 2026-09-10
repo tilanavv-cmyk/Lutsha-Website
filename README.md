@@ -1,68 +1,56 @@
 # Lutsha Training-First Website
 
-A responsive, multi-page website prepared for `lutsha.org.za`. It places Lutsha Institute of Professional Learning and its training services at the centre of the brand while retaining E-Learning Development and SMME Development as supporting solutions.
+Responsive multi-page website for `lutsha.org.za`, including the **Lutsha Beyond — International Skills, Mobility & Exchange Programme** page.
 
 ## Included pages
 
 - Home
 - Solutions
+- Lutsha Beyond (`/lutsha-beyond/`)
 - Enrolments
 - Join Us
 - Contact Us
 - Custom 404 page
 
-## Portal links
-
-- All programmes and self-application portal: `https://study.lutsha.org.za/`
-  - Includes accredited occupational qualifications and non-accredited practical courses
-- Assessment booking portal: `https://bookings.lutsha.org.za/`
-
-## Social media
-
-- Instagram: `https://www.instagram.com/lutsha_training/`
-- Facebook: `https://www.facebook.com/people/Lutsha-Empowerment/61579402142779/`
-
 ## Technology
 
 - Static HTML, CSS and JavaScript
-- No front-end framework or npm dependencies
-- Netlify Functions for Contact and Join Us submissions
-- Optional Supabase storage and Resend email notifications
+- Node build script copies `/site` to `/dist`
+- Cloudflare Workers + Static Assets for hosting/runtime
+- Cloudflare Worker endpoint at `/api/submit-form`
+- Supabase for form storage
+- Resend for email notifications
 
-## Local preview
+## Local static preview
 
 ```bash
-npm run dev
+npm run build
+npm run preview
 ```
 
 Open `http://localhost:4173`.
 
-## Netlify settings
+## Local Cloudflare Worker preview
 
-The included `netlify.toml` sets:
+```bash
+npm install
+npm run dev
+```
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Functions directory: `netlify/functions`
-- Node version: 20
+## Cloudflare deployment
 
-No Base directory is required when this folder is the repository root.
+See `CLOUDFLARE_DEPLOYMENT.md` for the staged migration checklist. Production DNS should only be moved after the `workers.dev` deployment and all existing DNS records have been verified.
 
-## Configure forms
+## Form configuration
 
 1. Run `supabase-schema.sql` in the Supabase SQL Editor.
-2. Add the environment variables from `.env.example` in Netlify.
+2. Add Worker runtime variables/secrets using `.env.example` as the name checklist.
 3. Use a verified Resend sending domain in `RESEND_FROM_EMAIL`.
-4. Keep `SUPABASE_SERVICE_ROLE_KEY` private in Netlify environment variables.
+4. Keep Supabase secret/service-role keys and the Resend API key out of GitHub.
 
-The forms continue if either Supabase storage or Resend succeeds. A clear message is shown if neither service is configured.
+The Worker attempts Supabase storage and Resend notification independently. A submission succeeds when at least one configured delivery path succeeds.
 
-## Before public launch
+## Portal links
 
-- Confirm the final list of programmes actively marketed on the website.
-- Confirm programme entry requirements, duration, fees and intake dates.
-- Confirm office hours shown on the Contact page.
-- Connect the final Google Business map location.
-- Add the approved Privacy Policy, PAIA/POPI Manual and website terms.
-- Review image permissions and replace any temporary visual if required.
-- Test all forms and both external portals on desktop and mobile.
+- Programmes and self-application: `https://study.lutsha.org.za/`
+- Assessment bookings: `https://bookings.lutsha.org.za/`

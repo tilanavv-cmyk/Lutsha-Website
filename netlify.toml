@@ -18,3 +18,10 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Migration compatibility: keep forms working if Netlify serves a build before DNS moves to Cloudflare.
+[[redirects]]
+  from = "/api/submit-form"
+  to = "/.netlify/functions/submit-form"
+  status = 200
+  force = true
