@@ -2,3 +2,5 @@
 
 /* Pathway images retain their full composition at every screen size. */
 .beyond-grid article{padding:0;overflow:hidden}.beyond-pathway-image{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}.beyond-pathway-copy{padding:30px 35px 35px}@media(max-width:560px){.beyond-grid article{padding:0}.beyond-pathway-copy{padding:25px}}
+
+.beyond-passport-photo{width:100%;max-width:460px;margin:auto}.beyond-passport-photo img{width:100%;height:auto;display:block;border-radius:12px}
