@@ -4,6 +4,7 @@ const navItems = [
   ['Home', '/'],
   ['Solutions', '/solutions/'],
   ['Lutsha Beyond', '/beyond/'],
+  ['LaunchLab', '/launchlab/'],
   ['Enrolments', '/enrolments/'],
   ['Join Us', '/join-us/'],
   ['Contact Us', '/contact/'],
@@ -81,7 +82,7 @@ function renderFooter() {
           <div class="accreditation-badge"><img src="/assets/qcto-logo.webp" alt="Quality Council for Trades and Occupations"><span>SDP accreditation<br><strong>05-QCTO/SDP170326123055</strong></span></div>
         </div>
         <div><h3>Explore</h3><div class="footer-links"><a class="footer-portal-link" href="https://study.lutsha.org.za/" target="_blank" rel="noreferrer">${icon('book','icon--small')} All programmes & apply</a>${navItems.map(([label,path]) => `<a href="${path}">${label}</a>`).join('')}<a href="https://bookings.lutsha.org.za/" target="_blank" rel="noreferrer">Assessment booking portal</a></div></div>
-        <div><h3>Contact</h3><div class="footer-contact"><a href="tel:+27731789245">${icon('phone')} 073 178 9245</a><a href="mailto:study@lutsha.org.za">${icon('mail')} study@lutsha.org.za</a><a href="mailto:info@lutsha.org.za">${icon('mail')} info@lutsha.org.za</a><span>${icon('map-pin')} 53 Marine Drive, First Floor, Tiger Wheel &amp; Tyre Building, Shelly Beach, 4265</span></div></div>
+        <div><h3>Contact</h3><div class="footer-contact"><a href="tel:+27731789245">${icon('phone')} 073 178 9245</a><a href="mailto:study@lutsha.org.za">${icon('mail')} study@lutsha.org.za</a><a href="mailto:launchlab@lutsha.org.za">${icon('mail')} launchlab@lutsha.org.za</a><a href="mailto:info@lutsha.org.za">${icon('mail')} info@lutsha.org.za</a><span>${icon('map-pin')} 53 Marine Drive, First Floor, Tiger Wheel &amp; Tyre Building, Shelly Beach, 4265</span></div></div>
         <div><h3>Follow Lutsha</h3><div class="footer-social"><a href="https://www.instagram.com/lutsha_training/" target="_blank" rel="noreferrer">${icon('instagram')}<span><strong>Instagram</strong><small>@lutsha_training</small></span></a><a href="https://www.facebook.com/people/Lutsha-Empowerment/61579402142779/" target="_blank" rel="noreferrer">${icon('facebook')}<span><strong>Facebook</strong><small>Lutsha Empowerment</small></span></a></div></div>
       </div>
       <div class="footer-bottom"><div class="container footer-bottom__inner"><span>© ${new Date().getFullYear()} Lutsha Empowerment (Pty) Ltd. All rights reserved.</span><span>Learn today. Lead tomorrow. Make an impact.</span></div></div>
