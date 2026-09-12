@@ -14,3 +14,13 @@
 .quick-path:focus-visible{outline:3px solid var(--teal);outline-offset:-4px}
 @media(max-width:1200px){.quick-paths-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-path{border-bottom:1px solid var(--line)}.quick-path:nth-child(2n){border-right:0}.quick-path:nth-child(n+3){border-bottom:0}}
 @media(max-width:680px){.quick-paths-grid{grid-template-columns:1fr}.quick-path{border-right:0}.quick-path:nth-child(n){border-bottom:1px solid var(--line)}.quick-path:last-child{border-bottom:0}.quick-path-mascots{width:54px;height:76px}}
+
+/* Beyond homepage feature uses supplied transparent brand artwork. */
+.home-beyond-banner{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding:45px 50px;background:linear-gradient(120deg,#fff 35%,#edf6fa);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.home-beyond-logo{display:block;width:340px;max-width:100%;height:auto;margin-bottom:24px}
+.home-beyond-copy h2{font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.1;margin:0 0 24px}
+.home-beyond-copy p{max-width:52ch;margin:0 0 26px}
+.home-beyond-copy .button{display:inline-flex;gap:12px;align-items:center}
+.home-beyond-art img{display:block;width:100%;max-width:420px;height:auto;margin:auto;filter:drop-shadow(0 16px 20px #07295812)}
+@media(max-width:900px){.home-beyond-banner{gap:24px;padding:32px}.home-beyond-logo{width:280px}}
+@media(max-width:680px){.home-beyond-banner{grid-template-columns:1fr;padding:28px 24px;gap:24px}.home-beyond-art{grid-row:2}.home-beyond-art img{max-width:260px}.home-beyond-copy .button{max-width:100%}}
