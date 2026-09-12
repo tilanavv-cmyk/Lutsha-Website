@@ -15,13 +15,16 @@
 @media(max-width:1200px){.quick-paths-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-path{border-bottom:1px solid var(--line)}.quick-path:nth-child(2n){border-right:0}.quick-path:nth-child(n+3){border-bottom:0}}
 @media(max-width:680px){.quick-paths-grid{grid-template-columns:1fr}.quick-path{border-right:0}.quick-path:nth-child(n){border-bottom:1px solid var(--line)}.quick-path:last-child{border-bottom:0}.quick-path-mascots{width:54px;height:76px}}
 
-/* Beyond homepage banner: copy left, compact brand logo right. */
-.home-beyond-banner{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:48px;align-items:center;padding:42px 50px;background:linear-gradient(120deg,#fff 35%,#edf6fa);border:1px solid var(--line);border-radius:28px}
-.home-beyond-copy{min-width:0}
-.home-beyond-copy h2{font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.1;margin:0 0 24px}
-.home-beyond-copy p{max-width:58ch;margin:0 0 26px}
-.home-beyond-copy .button{display:inline-flex;gap:12px;align-items:center}
-.home-beyond-art{display:flex;align-items:center;justify-content:flex-end}
-.home-beyond-art .home-beyond-logo{display:block;width:300px;max-width:100%;height:auto;margin:0}
-@media(max-width:900px){.home-beyond-banner{padding:32px;gap:28px;grid-template-columns:minmax(0,1fr) minmax(180px,240px)}}
-@media(max-width:680px){.home-beyond-banner{grid-template-columns:1fr;padding:28px 24px;gap:28px}.home-beyond-art{justify-content:flex-start}.home-beyond-art .home-beyond-logo{width:220px}.home-beyond-copy .button{max-width:100%}}
+/* Lutsha Beyond completes the final row of the expanded faculty portfolio. */
+.faculty-card{min-height:245px;transition:transform .2s ease,box-shadow .2s ease}
+.home-beyond-banner{grid-column:span 2;position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(200px,.9fr);min-height:245px;overflow:hidden;border-radius:18px;background:radial-gradient(circle at 85% 20%,#087f7b80,transparent 34%),linear-gradient(135deg,var(--navy3),var(--navy2));box-shadow:0 18px 42px rgba(7,41,88,.2);color:#dceaf4}
+.home-beyond-copy{position:relative;z-index:2;align-self:center;padding:32px 0 32px 34px;min-width:0}
+.home-beyond-copy .eyebrow{margin-bottom:8px;color:#8fe8dc}
+.home-beyond-copy h2{color:#fff;font-size:clamp(2rem,3.2vw,3.2rem);line-height:1.02;margin:0 0 14px}
+.home-beyond-copy p{max-width:42ch;margin:0 0 22px;color:#cfdfeb;font-size:.9rem}
+.home-beyond-copy .button{display:inline-flex;gap:10px;align-items:center}
+.home-beyond-art{position:relative;min-height:245px}
+.home-beyond-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy2),transparent 36%);pointer-events:none}
+.home-beyond-art img{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:min(310px,115%);max-width:none;height:auto;filter:drop-shadow(0 20px 30px #0008)}
+@media(max-width:900px){.home-beyond-banner{grid-column:span 2;grid-template-columns:minmax(0,1fr) minmax(180px,.75fr)}.home-beyond-copy{padding:30px 0 30px 30px}}
+@media(max-width:680px){.home-beyond-banner{grid-column:auto;grid-template-columns:1fr;min-height:0}.home-beyond-copy{padding:28px 24px 8px}.home-beyond-copy .button{max-width:100%}.home-beyond-art{min-height:245px}.home-beyond-art:after{background:linear-gradient(180deg,var(--navy2),transparent 28%)}.home-beyond-art img{right:50%;top:48%;transform:translate(50%,-50%);width:280px}}
