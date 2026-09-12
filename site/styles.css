@@ -57,3 +57,11 @@
 
 @media(max-width:900px){.study-course-card{min-height:490px}.study-course-card__head{min-height:74px}}
 @media(max-width:680px){.study-course-card{min-height:0;padding:26px}.study-course-card__head{min-height:0;margin-bottom:8px}.study-course-card__summary{min-height:0}.faculty-card__icon{width:86px;height:86px}}
+
+/* Three-dimensional homepage quick-action symbols. */
+.quick-path:has(.quick-path-icon-3d){min-height:145px}
+.quick-path-icon-3d{display:block;width:64px;height:64px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 8px 11px rgba(7,41,88,.16));transition:transform .22s ease}
+.quick-path:hover .quick-path-icon-3d{transform:translateY(-2px) scale(1.04)}
+.quick-path:has(.quick-path-icon-3d)>div{min-width:0}
+.quick-path:has(.quick-path-icon-3d) strong{line-height:1.35}
+@media(max-width:680px){.quick-path:has(.quick-path-icon-3d){min-height:125px}.quick-path-icon-3d{width:58px;height:58px}}
