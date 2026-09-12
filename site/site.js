@@ -3,6 +3,7 @@ const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><u
 const navItems = [
   ['Home', '/'],
   ['Solutions', '/solutions/'],
+  ['Lutsha Beyond', '/beyond/'],
   ['Enrolments', '/enrolments/'],
   ['Join Us', '/join-us/'],
   ['Contact Us', '/contact/'],
