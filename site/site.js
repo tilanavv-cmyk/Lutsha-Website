@@ -5,6 +5,7 @@ const navItems = [
   ['Solutions', '/solutions/'],
   ['Lutsha Beyond', '/beyond/'],
   ['LaunchLab', '/launchlab/'],
+  ['Marketplace', '/marketplace/'],
   ['Enrolments', '/enrolments/'],
   ['Join Us', '/join-us/'],
   ['Contact Us', '/contact/'],
